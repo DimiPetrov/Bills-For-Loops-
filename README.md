@@ -1,5 +1,6 @@
 # Bills-For-Loops-
 
+
 function solve([input]) {
     let months = Number(input[0]);
 
