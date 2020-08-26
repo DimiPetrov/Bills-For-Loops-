@@ -3,6 +3,7 @@
 function solve([input]) {
     let months = Number(input[0]);
 
+    //This a loop that is supposed to do something cool
     for(let i = 1; i <= months; i++) {
         let index = 1;
         let elMonth = input[index];
