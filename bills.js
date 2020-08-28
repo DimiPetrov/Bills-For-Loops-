@@ -1,17 +1,12 @@
-function solve([input]) {
+function solve(input) {
     let months = Number(input[0]);
     let electricity = 0;
     let other = 0;
 
     for(let i = 1; i <= months; i++) {
-        let index = 1;
-        let elMonth = input[index];
-        index++;
-    
+        let elMonth = Number(input[i]);
         electricity += elMonth;
-
         let otherMonth = (elMonth + 20 + 15) * 1.2;
-    
         other += otherMonth;
     }
 
