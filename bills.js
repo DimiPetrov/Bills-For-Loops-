@@ -1,18 +1,17 @@
-# Bills-For-Loops-
-
 function solve([input]) {
     let months = Number(input[0]);
+    let electricity = 0;
+    let other = 0;
 
-    //This a loop that is supposed to do something cool
     for(let i = 1; i <= months; i++) {
         let index = 1;
         let elMonth = input[index];
         index++;
-        let electricity = 0;
+    
         electricity += elMonth;
 
         let otherMonth = (elMonth + 20 + 15) * 1.2;
-        let other = 0;
+    
         other += otherMonth;
     }
 
@@ -27,3 +26,5 @@ function solve([input]) {
     console.log(`Average: ${average.toFixed(2)} lv`);
 
 }
+
+solve([ '5', '68.63', '89.25', '132.53', '93.53', '63.22' ])
