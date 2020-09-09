@@ -9,7 +9,7 @@ function solve(input) {
 
     let dishes = 0;
     let pots = 0;
-    let currentBatch = 0
+    let currentBatch = 0;
 
     let command = input.shift();
 
@@ -17,17 +17,12 @@ function solve(input) {
         currentBatch++;
 
         let modulo = currentBatch % 3;
-        console.log("currentBatch is " + currentBatch );
-        console.log("modulo is " + modulo );
+
         if(modulo == 1 || modulo == 2){
-            console.log("DISHES !!" );
-            //HERE we do what we need to do for dishes
             let numberOfDishes = Number(command);
             dishes += numberOfDishes;
             detergentLeftover -= DETERGENT_NEEDED_FOR_DISH * numberOfDishes;
         }else if(modulo == 0){
-            console.log("POTS !!" );
-            //HERE we do what we need to do for pots
             let numberOfPots = Number(command);
             pots += numberOfPots;
             detergentLeftover -= DETERGENT_NEEDED_FOR_POT * numberOfPots;
@@ -46,4 +41,4 @@ function solve(input) {
     }
 }
 
-solve([ '20', '53', '65', '55','53', '65', '55','53', '65', '55','53', '65', '55','53', '65', '55','53', '65', '55', 'End' ])
+solve([ '2', '53', '65', '55', 'End' ])
